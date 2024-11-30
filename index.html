@@ -41,12 +41,30 @@
                     <circle cx="13" cy="16.5214" r="5" class="fill-whi" fill=""></circle>
                 </svg>
             </div>
-            <div class="nav-link flex justify-betweena items-center space-x-6 font-medium font-custom">
+            <div class="nav-link flex justify-between items-center space-x-6 font-medium font-custom">
                 <a href="#">Home</a><a href="#story">Stories</a><a href="#rev">Reviews</a><a href="#app">Aproach</a><a
                     href="#art">Articles</a>
-                <button class="btn bg-bright-yellow text-black rounded-full px-2 py-2 text-sm">Contact Now</button>
+                <button class="btn bg-bright-yellow text-black rounded-full px-2 py-2 text-sm"><a href="#contact" class="text-sm">Contact Now</a></button>
             </div>
+        <i class="ri-menu-fold-3-line text-3xl  hidden"></i>
+
+
+
         </nav>
+        <!-- //open navbar -->
+        <div class="w-56 bg-white absolute right-0 top-0 pt-10 pb-10 hidden">
+            <div class="nav-link flex justify-start items-start flex-col gap-4 space-x-6 font-medium text-2xl font-custom">
+                <a href="#">Home</a>
+                <a href="#story">Stories</a>
+                <a href="#rev">Reviews</a>
+                <a href="#app">Aproach</a><a
+                 href="#art">Articles</a>
+                <button class="btn bg-bright-yellow text-black rounded-full px-2 py-2 text-sm"><a href="#contact" class="text-sm">Contact Now</a></button>
+            </div>
+
+
+        </div>
+
         <header class="min-h-screen flex justify-start items-center flex-col pt-40">
             <div class="home-text ">
                 <h1 class="text-7xl leading-snug text-white font-semibold"><span class="text-bright-yellow">Preline
@@ -542,6 +560,11 @@
                 </div>
             </div>
             <div id="art" class="w-full min-h-screen pt-24 flex flex-col items-start justify-center gap-9">
+                <div class="aside-head py-20 px-4">
+                    <h1 class="text-white font-semibold text-5xl ">Our Articles</h1>
+                    <p class="w-4/5 text-custom-gray font-semibold text-lg leading-5 mt-2">With over 30 awards, and
+                        achievements, we proudly demonstrate our unwavering dedication to excellence and client success.</p>
+                </div>
                 <div class="flex items-start justify-center gap-5 w-full p-5">
                     <div class=" sticky top-20 w-4/5 flex flex-col items-start gap-5">
                         <p class="text-white text-3xl uppercase font-bold">Shaping Tomorrow</p>
@@ -725,7 +748,7 @@
                     <p class="w-4/5 text-custom-gray font-semibold text-lg leading-5 mt-2">Whatever your goal - we will
                         get you there.</p>
                 </div>
-                <div class="foter-div flex items-center justify-center w-full gap-12">
+                <div class="foter-div flex items-center justify-center w-full gap-12" id="contact">
                     <div class="flex flex-col items-start justify-start gap-12">
                         <div class="flex items-start justify-start text-custom-gray gap-6">
                             <i class="ri-map-pin-line"></i>
@@ -758,22 +781,31 @@
                         <p class="text-bright-yellow ">Job Opening <i class="ri-arrow-right-line"></i></p>
                     </div>
                     <div class="flex flex-col items-start justify-start w-4/6">
-                        <form action="" class="flex flex-col justify-center items-center w-full gap-4">
+                        <form action="" class="flex flex-col justify-center items-start w-full gap-2">
                             <input type="text" placeholder="Name..."
-                                class="w-full placeholder:font-semibold placeholder:text-custom-gray p-4 rounded-lg outline-none text-custom-gray bg-dark-charcoal ">
+                                class="w-full name placeholder:font-semibold placeholder:text-custom-gray p-4 rounded-lg outline-none text-custom-gray bg-dark-charcoal ">
+                                <div class="msg text-sm font-bold text-red-600  hidden ">Error msg</div>
                             <input type="email" placeholder="Email..."
-                                class="w-full placeholder:font-semibold placeholder:text-custom-gray p-4 rounded-lg outline-none text-custom-gray bg-dark-charcoal ">
-                            <input type="text" placeholder="Company..."
-                                class="w-full placeholder:font-semibold placeholder:text-custom-gray p-4 rounded-lg outline-none text-custom-gray bg-dark-charcoal ">
+                                class="w-full email placeholder:font-semibold placeholder:text-custom-gray p-4 rounded-lg outline-none text-custom-gray bg-dark-charcoal ">
+                                <div class="msg text-sm font-bold text-red-600 hidden  ">Error msg</div>
+
+                            <input type="password" placeholder="password..."
+                                class="w-full pass placeholder:font-semibold placeholder:text-custom-gray p-4 rounded-lg outline-none text-custom-gray bg-dark-charcoal ">
+                                <div class="msg text-sm font-bold text-red-600 hidden  ">Error msg</div>
+
                             <input type="number" placeholder="Phone..."
-                                class="w-full placeholder:font-semibold placeholder:text-custom-gray p-4 rounded-lg outline-none text-custom-gray bg-dark-charcoal ">
-                            <textarea name="" id="" placeholder="Tell us about Your project..."
-                                class=" placeholder:font-semibold h-32 resize-none overflow-hidden w-full placeholder:text-custom-gray p-4 rounded-lg outline-none text-custom-gray bg-dark-charcoal "></textarea>
+                                class="w-full phone placeholder:font-semibold placeholder:text-custom-gray p-4 rounded-lg outline-none text-custom-gray bg-dark-charcoal ">
+                                <div class="msg text-sm font-bold text-red-600 hidden  ">Error msg</div>
+
+                            <textarea name="" id="" placeholder="Ask your Query!..."
+                                class=" text placeholder:font-semibold h-32 resize-none overflow-hidden w-full placeholder:text-custom-gray p-4 rounded-lg outline-none text-custom-gray bg-dark-charcoal "></textarea>
+                                <div class="msg text-sm font-bold text-red-600  hidden  ">Error msg</div>
+                                <button id="button" class="bg-bright-yellow mt-6 text-black py-2 px-3 rounded-3xl">Submitt <i
+                                        class="ri-arrow-right-line"></i></button>
+        
 
                         </form>
-                        <p class="text-custom-gray text-sm m-4 ml-0">All fields are required</p>
-                        <button class="bg-bright-yellow text-black py-2 px-3 rounded-3xl">Submitt <i
-                                class="ri-arrow-right-line"></i></button>
+                      
 
                     </div>
                 </div>
@@ -805,7 +837,7 @@
 
     </article>
 
-
+<script src="script.js"></script>
 
 </body>
 
