@@ -9,7 +9,7 @@ function contacntform() {
     let phone = document.querySelector(".phone")
     let password = document.querySelector(".pass")
     let text = document.querySelector(".text")
-    let btn = document.getElementById("button");
+    let btn = document.getElementById("buttoncontact");
 
 
     function showError(input) {
@@ -131,3 +131,18 @@ function contacntform() {
 contacntform();
 
 
+
+
+var opneicon= document.querySelector(".openicon");
+var closeicon= document.querySelector(".closeicon");
+
+var opennav= document.getElementById("openav");
+
+opneicon.addEventListener("click",()=>{
+    opennav.classList.remove("hidden")
+
+})
+closeicon.addEventListener("click",()=>{
+    opennav.classList.add("hidden")
+
+})
